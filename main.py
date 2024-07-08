@@ -1,5 +1,6 @@
 import sys
 import os
+# افزودن مسیر جاری به مسیر جستجو برای ماژول‌ها
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from fastapi import FastAPI
 app = FastAPI()

@@ -7,10 +7,11 @@ services:
       dockerfile: Dockerfile
     container_name: fastapi2
     command: uvicorn --host 0.0.0.0 --port 8000 main:app --reload
-    volumes:
+
+    volumes:     #اتصال دایرکتوری فعلی به دایرکتوری app داخل کانتینر برای توسعه آسانتر#
       - .:/app
     ports:
-      - "8000:8000"  # پورت داخلی و خارجی برای این پروژه
+      - "8000:8000"  # پورت داخلی و خارجی برای این پروژه#
     networks:
       - fastapi-network
     restart: always
